@@ -21,6 +21,6 @@ const controller = require('../Controllers/Homecontroller');
 //adding route
 Homepage.get("/",controller.Home);
 //adding route
-Homepage.post("/",controller.Allfetchdata);
+//Homepage.post("/",controller.Allfetchdata);
 //exporting route
 module.exports = Homepage;
