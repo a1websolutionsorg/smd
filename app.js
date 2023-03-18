@@ -9,11 +9,11 @@ const path = require("path");
 //static
 const static = path.join(__dirname, "./Public");
 //set home engine
-application.set('view engine', 'ejs');
-//set file path
-const Views = path.join(__dirname, '../Views');
-//set route
-application.set("Views",Views);
+// application.set('view engine', 'ejs');
+// //set file path
+// const Views = path.join(__dirname, '../Views');
+// //set route
+// application.set("Views",Views);
 //use a folder for staic files
 application.use(express.static(static));
 //set static
