@@ -1,6 +1,6 @@
 const Home = async(request,response)=>{
     try{
-        response.render("index");
+        response.render("home");
     }catch(error){
         console.log(error);
     }
