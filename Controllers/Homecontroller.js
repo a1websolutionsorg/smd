@@ -25,17 +25,17 @@ const Allfetchdata = async(request,response)=>{
                 axios.request(options).then((youtube)=>{
                     const result = youtube.data;
                     if(result.formats.url ==='undefined'){
-                        response.render("index",{
+                        response.render("home",{
                             message:"Sorry Cant Find YouTube video with This URL",
                         });
                         console.log(result)
                     }else{
-                        response.render("index",{
+                        response.render("home",{
                             youtube:result
                         });
                     }
                 }).catch((error)=>{
-                    response.render("index",{
+                    response.render("home",{
                         message:"Sorry Cant Find YouTube video with This URL",
                     });
                     console.log(error);
@@ -53,16 +53,16 @@ const Allfetchdata = async(request,response)=>{
                 axios.request(options).then((youtube)=>{
                     const result = youtube.data;
                     if(result.formats.url === 'undefined'){
-                        response.render("index",{
+                        response.render("home",{
                             message:"Data Not Found",
                         });
                     }else{
-                        response.render("index",{
+                        response.render("home",{
                             youtube:result
                         });
                     }
                 }).catch((error)=>{
-                    response.render("index",{
+                    response.render("home",{
                         message:"Sorry Cant Find YouTube video with This URL"
                     });
                     console.error(error);
@@ -73,7 +73,7 @@ const Allfetchdata = async(request,response)=>{
                 const userinput = request.body.allvalue;
                 const options = {
                     method: 'GET',
-                    url: 'https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index',
+                    url: 'https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/home',
                     params: {url:userinput},
                     headers: {
                         'X-RapidAPI-Key': '5ed88926c7mshaf1da489d92a152p15bdc3jsne9c441f254b2',
@@ -83,17 +83,17 @@ const Allfetchdata = async(request,response)=>{
                 axios.request(options).then((instadata)=>{
                     const finaldetails = instadata.data;
                     if(finaldetails === "undefined"){
-                        response.render("index",{
+                        response.render("home",{
                             message:"Instagram Link Is Not valid",
                         });
                     }else{
-                        response.render("index",{
+                        response.render("home",{
                             instadata:finaldetails,
                         });
                     }
                 }).catch((error)=>{
                     console.error(error);
-                    response.render("index",{
+                    response.render("home",{
                         message:"Instagram Link Is Not valid",
                     });
                 });
@@ -112,16 +112,16 @@ const Allfetchdata = async(request,response)=>{
                     axios.request(options).then((facedata)=>{
                         const result = facedata.data;
                         if(result.links["Download Low Quality"] === "undefined"){
-                            response.render("index",{
+                            response.render("home",{
                                 message:" Your Link Is Not Valid",
                             });
                         }else{
-                            response.render("index",{
+                            response.render("home",{
                                 facedata:result
                             });
                         }
                     }).catch((error)=>{
-                        response.render("index",{
+                        response.render("home",{
                             message:"Sorry Your Link Is Not Valid",
                         });
                         console.error(error);
@@ -133,7 +133,7 @@ const Allfetchdata = async(request,response)=>{
                     //header method
                     const options = {
                         method: 'GET',
-                        url: 'https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index',
+                        url: 'https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/home',
                         params: {url:userinput},
                         headers: {
                             'X-RapidAPI-Key':'5ed88926c7mshaf1da489d92a152p15bdc3jsne9c441f254b2',
@@ -143,16 +143,16 @@ const Allfetchdata = async(request,response)=>{
                     axios.request(options).then((tiktokdata)=>{
                         const finalResult = tiktokdata.data;
                         if(finalResult === "undefined"){
-                            response.render("index",{
+                            response.render("home",{
                                 message:"Please Enter  Valid Liink",
                             });
                         }else{
-                            response.render("index",{
+                            response.render("home",{
                                 tiktokdata:finalResult
                             });
                         }  
                     }).catch((error)=>{
-                        response.render("index",{
+                        response.render("home",{
                             message:"Sorry Link Is Not Valid",
                         });
                         console.log(error);
@@ -171,22 +171,22 @@ const Allfetchdata = async(request,response)=>{
                     };
                     axios.request(options).then((pintrestdata)=>{
                         if(pintrestdata === "undefined"){
-                            response.render("index",{
+                            response.render("home",{
                                 message:"Please Enter Valid Link",
                             });
                         }else{
-                            response.render("index",{
+                            response.render("home",{
                                 pintrestdata:pintrestdata.data.data,
                             });
                         }  
                     }).catch((error)=>{
-                        response.render("index",{
+                        response.render("home",{
                             message:"Please Enter Valid Link",
                         });
                         console.error(error);
                     }); 
         }else{
-            response.render("index",{
+            response.render("home",{
                 message:"Please Enter Valid Website Link",
             });
         }
