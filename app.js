@@ -28,6 +28,8 @@ console.log(bootstrapviewr)
 application.get("/", (req, resp) => {
 
     resp.render("home");
+
+    
 });
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
