@@ -25,7 +25,10 @@ const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
 
 console.log(bootstrapviewr)
 //set Home page
+application.get("/", (req, resp) => {
 
+    resp.render("home");
+});
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
 //get home page
@@ -50,21 +53,20 @@ application.use(tiktokpage);
 const aboutpage = require("./Routes/Aboutroute");
 //set route 
 application.use(aboutpage);
-const Homepage = require ("./Routes/Homeroute");
+//const Homepage = require ("./Routes/Homeroute");
 //use homepage
-application.use(Homepage);
+//application.use(Homepage);
+
+
 //get notfound
 const notfind = require("./Routes/notfindroute");
 //set notfound 
 application.use(notfind);
 
-application.get("/", (req, resp) => {
 
-    resp.render("home");
-});
 //set a listen port
 application.listen(process.env.PORT_KEY, () => {
     console.log(`http://localhost:${process.env.PORT_KEY}`);
 });
 
-console.log("Look if it works")
+console.log("Look if it works gfsdfgsfgsdf")
