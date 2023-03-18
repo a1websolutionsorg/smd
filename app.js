@@ -28,10 +28,7 @@ const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
 console.log(bootstrapviewr)
 //set Home page
 application.get("/", (req, resp) => {
-
     resp.render("home");
-
-
 });
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
