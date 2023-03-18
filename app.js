@@ -20,6 +20,10 @@ application.use(express.static(static));
 application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dist/css")));
 //set bs5js
 application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dist/js")));
+
+const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
+
+console.log(bootstrapviewr)
 //set Home page
 const Homepage = require ("./Routes/Homeroute");
 //use homepage
