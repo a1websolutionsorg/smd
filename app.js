@@ -46,7 +46,7 @@ const tiktokpage = require("./Routes/Tiktokroute");
 application.use(tiktokpage);
 //get privcay route
 const aboutpage = require("./Routes/Aboutroute");
-//set route
+//set route 
 application.use(aboutpage);
 //get notfound
 const notfind = require("./Routes/notfindroute");
@@ -56,3 +56,5 @@ application.use(notfind);
 application.listen(process.env.PORT_KEY, () => {
     console.log(`http://localhost:${process.env.PORT_KEY}`);
 });
+
+console.log("Look if it works")
