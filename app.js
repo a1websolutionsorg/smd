@@ -11,11 +11,11 @@ const static = path.join(__dirname, "./Public");
 //set home engine
  application.set('view engine', 'ejs');
 // //set file path
-const Views = path.join(__dirname, './views');
+const views = path.join(__dirname, './views');
 
-console.log(Views)
+console.log(views)
 // //set route
-application.set("views",Views);
+application.set("views",views);
 //use a folder for staic files
 application.use(express.static(static));
 //set static
@@ -26,9 +26,9 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 //const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
 //console.log(bootstrapviewr);
 
-application.get('https://smdownloads.com',(req,res)=>{
-    res.render('index');
-})
+application.get('/',(req,res)=>{
+    res.render('Layouts/index');
+});
 
 
 //get Home route
