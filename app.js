@@ -24,12 +24,7 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dist/js")));
 
 const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
-
 console.log(bootstrapviewr)
-//set Home page
-application.get("/", (req, resp) => {
-    resp.render("home");
-});
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
 //get home page
@@ -54,9 +49,9 @@ application.use(tiktokpage);
 const aboutpage = require("./Routes/Aboutroute");
 //set route 
 application.use(aboutpage);
-//const Homepage = require ("./Routes/Homeroute");
+const Homepage = require ("./Routes/Homeroute");
 //use homepage
-//application.use(Homepage);
+application.use(Homepage);
 
 
 //get notfound
