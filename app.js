@@ -31,9 +31,9 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 //    res.render("home");
 // });
 
-const Homepage = require ("./Routes/Homeroute");
+const Homepages = require ("./Routes/Homeroute");
 //use homepage
-application.use(Homepage);
+application.use(Homepages);
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
 //get home page
