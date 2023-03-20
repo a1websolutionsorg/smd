@@ -27,13 +27,13 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 //const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
 //console.log(bootstrapviewr);
 
-application.get('/',(req,res)=>{
-   res.render("home");
-});
+// application.get('/',(req,res)=>{
+//    res.render("home");
+// });
 
-//const Homepage = require ("./Routes/Homeroute");
+const Homepage = require ("./Routes/Homeroute");
 //use homepage
-//application.use(Homepage);
+application.use(Homepage);
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
 //get home page
