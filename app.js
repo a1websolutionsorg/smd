@@ -28,7 +28,7 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 //console.log(bootstrapviewr);
 
 application.get('/',(req,res)=>{
-   res.render("home");
+   res.render("about");
 });
 
 //const Homepage = require ("./Routes/Homeroute");
@@ -55,9 +55,9 @@ const tiktokpage = require("./Routes/Tiktokroute");
 //get face page
 application.use(tiktokpage);
 //get privcay route
-const aboutpage = require("./Routes/Aboutroute");
+// const aboutpage = require("./Routes/Aboutroute");
 //set route 
-application.use(aboutpage);
+// application.use(aboutpage);
 //get notfound
 const notfind = require("./Routes/notfindroute");
 //set notfound 
