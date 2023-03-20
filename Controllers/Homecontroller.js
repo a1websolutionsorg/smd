@@ -1,7 +1,6 @@
 const Home = async(request,response)=>{
     try{
-        response.render("home");
-        
+        response.render("youtube");
     }catch(error){
         console.log(error);
     }
