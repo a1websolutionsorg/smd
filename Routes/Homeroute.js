@@ -23,7 +23,7 @@ const controller = require('../Controllers/Homecontroller');
 
 
 
-Homepage.get("/home",controller.homepage);
+Homepage.get("/",controller.homepage);
 //adding route
 //Homepage.post("/",controller.Allfetchdata);
 //exporting route
