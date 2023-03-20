@@ -1,6 +1,6 @@
 const homepage = async(request,response)=>{
     try{
-        response.render("views/home");
+        response.render("home");
     }catch(error){
         console.log(error);
     }
