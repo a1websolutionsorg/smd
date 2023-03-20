@@ -11,11 +11,11 @@ const static = path.join(__dirname, "./Public");
 //set home engine
  application.set('view engine', 'ejs');
 // //set file path
-//const views = path.join(__dirname, './views');
+const views = path.join(__dirname, './views');
 
 //console.log(views)
 // //set route
-//application.set("views",views);
+application.set("views",views);
 //use a folder for staic files
 application.use(express.static(static));
 //set static
