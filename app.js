@@ -11,11 +11,11 @@ const static = path.join(__dirname, "./Public");
 //set home engine
  application.set('view engine', 'ejs');
 // //set file path
-const views = path.join(__dirname, './views');
+//const views = path.join(__dirname, './views');
 
-console.log(views)
+//console.log(views)
 // //set route
-application.set("views",views);
+//application.set("views",views);
 //use a folder for staic files
 application.use(express.static(static));
 //set static
@@ -26,11 +26,13 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 //const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
 //console.log(bootstrapviewr);
 
-application.get('/',(req,res)=>{
-    res.render('Layouts/index');
+application.get('',(req,res)=>{
+    res.render('index');
 });
 
-
+//const Homepage = require ("./Routes/Homeroute");
+//use homepage
+//application.use(Homepage);
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
 //get home page
@@ -55,11 +57,6 @@ application.use(tiktokpage);
 const aboutpage = require("./Routes/Aboutroute");
 //set route 
 application.use(aboutpage);
-//const Homepage = require ("./Routes/Homeroute");
-//use homepage
-//application.use(Homepage);
-
-
 //get notfound
 const notfind = require("./Routes/notfindroute");
 //set notfound 
