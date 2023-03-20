@@ -6,9 +6,9 @@ const path = require('path');
 //set view engine
 Homepage.set("view engine","ejs");
 //set path 
-Homepage.set("views",path.join(__dirname,"../../views"));
+Homepage.set("views",path.join(__dirname,"../views"));
 //set default stactic settings
-console.log(path.join(__dirname,"../../views"))
+console.log(path.join(__dirname,"../views"))
 //body-parser
 const bodyParser = require("body-parser");
 // use bodyParser
@@ -18,7 +18,7 @@ Homepage.use(bodyParser.urlencoded({extended:true}));
 //load home page 
 const controller = require('../Controllers/Homecontroller');
 //adding route
-Homepage.get("/",controller.Home);
+Homepage.get("/",controller.homepage);
 //adding route
 //Homepage.post("/",controller.Allfetchdata);
 //exporting route

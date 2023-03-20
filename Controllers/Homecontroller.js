@@ -1,4 +1,4 @@
-const Home = async(request,response)=>{
+const homepage = async(request,response)=>{
     try{
         response.render("index");
     }catch(error){
@@ -195,6 +195,6 @@ const Home = async(request,response)=>{
 //     }
 // }
 module.exports = {
-    Home,
+    homepage,
   
 }
