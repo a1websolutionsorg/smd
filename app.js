@@ -27,9 +27,9 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 //const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
 //console.log(bootstrapviewr);
 
-// application.get('/',(req,res)=>{
-//    res.render("home");
-// });
+application.get('/home',(req,res)=>{
+   res.render("home");
+});
 
 const Homepages = require ("./Routes/Homeroute");
 //use homepage
