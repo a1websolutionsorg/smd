@@ -18,7 +18,7 @@ Homepage.use(bodyParser.urlencoded({extended:true}));
 //load home page 
 const controller = require('../Controllers/Homecontroller');
 //adding route
-Homepage.get("/",controller.homepage);
+Homepage.get("/home",controller.homepage);
 //adding route
 //Homepage.post("/",controller.Allfetchdata);
 //exporting route
