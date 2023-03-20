@@ -8,6 +8,8 @@ const application = express();
 const path = require("path");
 //static
 const static = path.join(__dirname, "./Public");
+
+console.log(static)
 //set home engine
  application.set('view engine', 'ejs');
 // //set file path
