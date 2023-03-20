@@ -8,7 +8,6 @@ const application = express();
 const path = require("path");
 //static
 const static = path.join(__dirname, "./Public");
-
 console.log(static)
 //set home engine
  application.set('view engine', 'ejs');
@@ -28,8 +27,8 @@ application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dis
 //const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
 //console.log(bootstrapviewr);
 
-application.get('',(req,res)=>{
-    res.render('index');
+application.get('/',(req,res)=>{
+   res.send("Homepage")
 });
 
 //const Homepage = require ("./Routes/Homeroute");
