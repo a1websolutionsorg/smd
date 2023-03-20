@@ -65,4 +65,3 @@ application.listen(process.env.PORT_KEY, () => {
     console.log(`http://localhost:${process.env.PORT_KEY}`);
 });
 
-console.log("Look if it works gfsdfgsfgsdf")
