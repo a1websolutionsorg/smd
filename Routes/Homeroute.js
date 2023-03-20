@@ -1,15 +1,14 @@
 const express = require('express');            
 //set homepage 
 const Homepage = express();
+//
+const path = require('path');
 //set view engine
 Homepage.set("view engine","ejs");
-//set default stactic settings
-const path = require('path');
-const storeVIew = path.join(__dirname, '../views');
-
-console.log(storeVIew);
 //set path 
-Homepage.set("views",storeVIew);
+Homepage.set("views","../views");
+//set default stactic settings
+console.log(path.join(__dirname,"../views"))
 //body-parser
 const bodyParser = require("body-parser");
 // use bodyParser
