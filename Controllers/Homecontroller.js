@@ -1,6 +1,6 @@
 const homepage = async(request,response)=>{
     try{
-        response.redirect("home");
+        response.redirect("demo");
     }catch(error){
         console.log(error);
     }
