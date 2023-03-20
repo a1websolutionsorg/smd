@@ -8,7 +8,7 @@ Homepage.set("view engine","ejs");
 //set path 
 Homepage.set("views","../views");
 //set default stactic settings
-console.log(path.join(__dirname,"../views"))
+//console.log(path.join(__dirname,"../views"))
 //body-parser
 const bodyParser = require("body-parser");
 // use bodyParser
