@@ -51,9 +51,9 @@ const tiktokpage = require("./Routes/Tiktokroute");
 //get face page
 application.use(tiktokpage);
 //get privcay route
-// const aboutpage = require("./Routes/Aboutroute");
+const aboutpage = require("./Routes/Aboutroute");
 //set route 
-// application.use(aboutpage);
+application.use(aboutpage);
 //get notfound
 const notfind = require("./Routes/notfindroute");
 //set notfound 
