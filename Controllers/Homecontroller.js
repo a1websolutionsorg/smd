@@ -80,21 +80,40 @@ const Allfetchdata = async(request,response)=>{
                         'X-RapidAPI-Host': 'instagram-downloader-download-instagram-videos-stories.p.rapidapi.com'
                     }
                 };
-                axios.request(options).then((instadata)=>{
-                    const finaldetails = instadata.data;
+                // axios.request(options).then((instadata)=>{
+                //     const finaldetails = instadata.data;
+                //     if(finaldetails === "undefined"){
+                //         response.render("index",{
+                //             message:"Instagram Link Is Not valid",
+                //         });
+                //     }else{
+                //         response.render("index",{
+                //             instadata:finaldetails,
+                //         });
+                //     }
+                // }).catch((error)=>{
+                //     console.error(error);
+                //     response.render("index",{
+                //         message:"Instagram Link Is Not valid",
+                //     });
+                // });
+                axios.request(options).then((response)=>{
+                    console.log(response.data);
+                    const finaldetails = response.data;
                     if(finaldetails === "undefined"){
-                        response.render("index",{
-                            message:"Instagram Link Is Not valid",
+                        res.render("instagram",{
+                            message:"Sorry Data Is Not Available",
                         });
                     }else{
-                        response.render("index",{
-                            instadata:finaldetails,
+                        res.render("instagram",{
+                            data:finaldetails,
                         });
+                        console.log(finaldetails)
                     }
                 }).catch((error)=>{
                     console.error(error);
-                    response.render("index",{
-                        message:"Instagram Link Is Not valid",
+                    res.render("instagram",{
+                        message:"Sorry Your Link Is Not valid"
                     });
                 });
         }else if(userlink.includes("https://www.facebook.com/") || userlink.includes("https://fb.watch/")){
