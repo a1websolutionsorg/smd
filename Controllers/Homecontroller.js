@@ -126,7 +126,7 @@ const Allfetchdata = async(request,response)=>{
                         });
                         console.error(error);
                     }); 
-        }else if(userlink.includes("https://vm.tiktok.com/")){
+        }else if(userinput.includes("https://vm.tiktok.com/") || userinput.includes("https://www.tiktok.com/")){
                     //axios advance fetch request
                     const axios = require("axios");
                     const userinput = request.body.allvalue;

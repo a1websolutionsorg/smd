@@ -11,7 +11,7 @@ const tiktokdata = async(request,response)=>{
     const axios = require("axios");
     const userinput = request.body.tikvalue;
     //header method
-    if(userinput.includes("https://vm.tiktok.com/")){
+    if(userinput.includes("https://vm.tiktok.com/") || userinput.includes("https://www.tiktok.com/")){
         const options = {
             method: 'GET',
             url: 'https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index',
