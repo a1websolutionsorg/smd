@@ -98,7 +98,7 @@ const Allfetchdata = async(request,response)=>{
                 //     });
                 // });
                 axios.request(options).then((response)=>{
-                    console.log(response.data);
+                    //console.log(response.data);
                     const finaldetails = response.data;
                     if(finaldetails === "undefined"){
                         res.render("instagram",{
@@ -106,7 +106,7 @@ const Allfetchdata = async(request,response)=>{
                         });
                     }else{
                         res.render("instagram",{
-                            data:finaldetails,
+                            instadata:finaldetails,
                         });
                         console.log(finaldetails)
                     }
