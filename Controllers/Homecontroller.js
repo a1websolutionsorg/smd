@@ -69,53 +69,34 @@ const Allfetchdata = async(request,response)=>{
                 });
             }
         }else if(userlink.includes("https://www.instagram.com/")){
-                const axios = require("axios");
-                const userinput = request.body.allvalue;
-                const options = {
-                    method: 'GET',
-                    url: 'https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/home',
-                    params: {url:userinput},
-                    headers: {
-                        'X-RapidAPI-Key': '87beb0315bmshe7574d741ee8a12p1086b5jsn5d31f681354b',
-                        'X-RapidAPI-Host': 'instagram-downloader-download-instagram-videos-stories.p.rapidapi.com'
-                    }
-                };
-                // axios.request(options).then((instadata)=>{
-                //     const finaldetails = instadata.data;
-                //     if(finaldetails === "undefined"){
-                //         response.render("index",{
-                //             message:"Instagram Link Is Not valid",
-                //         });
-                //     }else{
-                //         response.render("index",{
-                //             instadata:finaldetails,
-                //         });
-                //     }
-                // }).catch((error)=>{
-                //     console.error(error);
-                //     response.render("index",{
-                //         message:"Instagram Link Is Not valid",
-                //     });
-                // });
-                axios.request(options).then((response)=>{
-                    //console.log(response.data);
-                    const finaldetails = response.data;
-                    if(finaldetails === "undefined"){
-                        res.render("instagram",{
-                            message:"Sorry Data Is Not Available",
-                        });
-                    }else{
-                        res.render("instagram",{
-                            instadata:finaldetails,
-                        });
-                        console.log(finaldetails)
-                    }
-                }).catch((error)=>{
-                    console.error(error);
-                    res.render("instagram",{
-                        message:"Sorry Your Link Is Not valid"
+            const axios = require("axios");
+            const userinput = request.body.allvalue;
+            const options = {
+                method: 'GET',
+                url: 'https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index',
+                params: {url:userinput},
+                headers: {
+                    'X-RapidAPI-Key': '87beb0315bmshe7574d741ee8a12p1086b5jsn5d31f681354b',
+                    'X-RapidAPI-Host': 'instagram-downloader-download-instagram-videos-stories.p.rapidapi.com'
+                }
+            };
+            axios.request(options).then((instadata)=>{
+                const finaldetails = instadata.data;
+                if(finaldetails === "undefined"){
+                    response.render("index",{
+                        message:"Instagram Link Is Not valid",
                     });
+                }else{
+                    response.render("index",{
+                        instadata:finaldetails,
+                    });
+                }
+            }).catch((error)=>{
+                console.error(error);
+                response.render("index",{
+                    message:"Instagram Link Is Not valid",
                 });
+            });
         }else if(userlink.includes("https://www.facebook.com/") || userlink.includes("https://fb.watch/")){
                     const axios = require("axios");
                     const userlink = request.body.allvalue;
