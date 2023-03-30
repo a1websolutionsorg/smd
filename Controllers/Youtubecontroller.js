@@ -17,12 +17,12 @@ const Youtubedata = async(request,response)=>{
                 url: 'https://ytstream-download-youtube-videos.p.rapidapi.com/dl',
                 params: {id:longlink},
                 headers: {
-                    'X-RapidAPI-Key': 'dd48c21838msh24c3a01ae521928p1c1e29jsn87a12fae7867',
+                    'X-RapidAPI-Key': '87beb0315bmshe7574d741ee8a12p1086b5jsn5d31f681354b',
                     'X-RapidAPI-Host': 'ytstream-download-youtube-videos.p.rapidapi.com'
                 }
             };
             axios.request(options).then((data)=>{
-                if(result.formats.url === 'undefined') {
+                if(data.data.formats.url === 'undefined') {
                     response.render("youtube",{
                         message:"Data Not Found",
                     });
@@ -31,23 +31,26 @@ const Youtubedata = async(request,response)=>{
                         data:data.data,
                     });
                 }
+                console.log(data)
             }).catch((error)=>{
                 response.render("youtube",{
-                    message:"Sorry Cant Find YouTube video with This URL"
+                    message:"Sorry Your Code Not Working"
                 });
+                console.log(error);
             });
-        }else if(shortlink.length === 11){
+        }
+        else if(shortlink.length === 11){
             const options = {
                 method: 'GET',
                 url: 'https://ytstream-download-youtube-videos.p.rapidapi.com/dl',
                 params: {id:shortlink},
                 headers: {
-                    'X-RapidAPI-Key': 'dd48c21838msh24c3a01ae521928p1c1e29jsn87a12fae7867',
+                    'X-RapidAPI-Key': '87beb0315bmshe7574d741ee8a12p1086b5jsn5d31f681354b',
                     'X-RapidAPI-Host': 'ytstream-download-youtube-videos.p.rapidapi.com'
                 }
             };
             axios.request(options).then((data)=>{ 
-                if(result.formats.url === 'undefined') {
+                if(data.data.formats.url === 'undefined') {
                     response.render("youtube",{
                         message:"Data Not Found",
                     });
@@ -60,6 +63,7 @@ const Youtubedata = async(request,response)=>{
                 response.render("youtube",{
                     message:"Sorry There was an error"
                 });
+                console.log(error);
             });
         }
     }catch(error){

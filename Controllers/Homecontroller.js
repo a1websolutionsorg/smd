@@ -116,7 +116,7 @@ const Allfetchdata = async(request,response)=>{
                                 message:" Your Link Is Not Valid",
                             });
                         }else{
-                            response.render("home",{
+                            response.render("index",{
                                 facedata:result
                             });
                         }
