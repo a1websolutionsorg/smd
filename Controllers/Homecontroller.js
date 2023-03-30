@@ -62,7 +62,7 @@ const Allfetchdata = async(request,response)=>{
                         });
                     }
                 }).catch((error)=>{
-                    response.render("home",{
+                    response.render("index",{
                         message:"Sorry Cant Find YouTube video with This URL"
                     });
                     console.error(error);
