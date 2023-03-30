@@ -14,7 +14,7 @@ const userdata = async(request,res)=>{
 			url: 'https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index',
 			params: {url:userinput},
 			headers: {
-				'X-RapidAPI-Key': '5ed88926c7mshaf1da489d92a152p15bdc3jsne9c441f254b2',
+				'X-RapidAPI-Key': '87beb0315bmshe7574d741ee8a12p1086b5jsn5d31f681354b',
 				'X-RapidAPI-Host': 'instagram-downloader-download-instagram-videos-stories.p.rapidapi.com'
 			}
 		};
@@ -29,6 +29,7 @@ const userdata = async(request,res)=>{
 				res.render("instagram",{
 					data:finaldetails,
 				});
+				console.log(finaldetails)
 			}
 		}).catch((error)=>{
 			console.error(error);

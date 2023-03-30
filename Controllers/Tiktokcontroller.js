@@ -10,7 +10,6 @@ const tiktokdata = async(request,response)=>{
     //axios advance fetch request
     const axios = require("axios");
     const userinput = request.body.tikvalue;
-    const KEY = process.env.TIK_KEY;
     //header method
     if(userinput.includes("https://vm.tiktok.com/")){
         const options = {
@@ -18,7 +17,7 @@ const tiktokdata = async(request,response)=>{
             url: 'https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index',
             params: {url:userinput},
             headers: {
-                'X-RapidAPI-Key':KEY,
+                'X-RapidAPI-Key':'87beb0315bmshe7574d741ee8a12p1086b5jsn5d31f681354b',
                 'X-RapidAPI-Host': 'tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com'
             }
         };

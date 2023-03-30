@@ -15,7 +15,7 @@ const pintrestdata = async(request, response)=>{
                 url: 'https://pinterest-video-and-image-downloader.p.rapidapi.com/pinterest',
                 params: {url:userlink},
                 headers: {
-                  'X-RapidAPI-Key':'4b0168de0emsh430ea2016f030e6p121ce3jsn001217d98ef1',
+                  'X-RapidAPI-Key':'87beb0315bmshe7574d741ee8a12p1086b5jsn5d31f681354b',
                   'X-RapidAPI-Host': 'pinterest-video-and-image-downloader.p.rapidapi.com'
                 }
               };
