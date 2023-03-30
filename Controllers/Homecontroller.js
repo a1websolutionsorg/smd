@@ -25,17 +25,17 @@ const Allfetchdata = async(request,response)=>{
                 axios.request(options).then((youtube)=>{
                     const result = youtube.data;
                     if(result.formats.url ==='undefined'){
-                        response.render("home",{
+                        response.render("index",{
                             message:"Sorry Cant Find YouTube video with This URL",
                         });
                         console.log(result)
                     }else{
-                        response.render("home",{
+                        response.render("index",{
                             youtube:result
                         });
                     }
                 }).catch((error)=>{
-                    response.render("home",{
+                    response.render("index",{
                         message:"Sorry Cant Find YouTube video with This URL",
                     });
                     console.log(error);
@@ -53,11 +53,11 @@ const Allfetchdata = async(request,response)=>{
                 axios.request(options).then((youtube)=>{
                     const result = youtube.data;
                     if(result.formats.url === 'undefined'){
-                        response.render("home",{
+                        response.render("index",{
                             message:"Data Not Found",
                         });
                     }else{
-                        response.render("home",{
+                        response.render("index",{
                             youtube:result
                         });
                     }
@@ -83,17 +83,17 @@ const Allfetchdata = async(request,response)=>{
                 axios.request(options).then((instadata)=>{
                     const finaldetails = instadata.data;
                     if(finaldetails === "undefined"){
-                        response.render("home",{
+                        response.render("index",{
                             message:"Instagram Link Is Not valid",
                         });
                     }else{
-                        response.render("home",{
+                        response.render("index",{
                             instadata:finaldetails,
                         });
                     }
                 }).catch((error)=>{
                     console.error(error);
-                    response.render("home",{
+                    response.render("index",{
                         message:"Instagram Link Is Not valid",
                     });
                 });
@@ -112,7 +112,7 @@ const Allfetchdata = async(request,response)=>{
                     axios.request(options).then((facedata)=>{
                         const result = facedata.data;
                         if(result.links["Download Low Quality"] === "undefined"){
-                            response.render("home",{
+                            response.render("index",{
                                 message:" Your Link Is Not Valid",
                             });
                         }else{
@@ -121,7 +121,7 @@ const Allfetchdata = async(request,response)=>{
                             });
                         }
                     }).catch((error)=>{
-                        response.render("home",{
+                        response.render("index",{
                             message:"Sorry Your Link Is Not Valid",
                         });
                         console.error(error);
@@ -143,16 +143,16 @@ const Allfetchdata = async(request,response)=>{
                     axios.request(options).then((tiktokdata)=>{
                         const finalResult = tiktokdata.data;
                         if(finalResult === "undefined"){
-                            response.render("home",{
+                            response.render("index",{
                                 message:"Please Enter  Valid Liink",
                             });
                         }else{
-                            response.render("home",{
+                            response.render("index",{
                                 tiktokdata:finalResult
                             });
                         }  
                     }).catch((error)=>{
-                        response.render("home",{
+                        response.render("index",{
                             message:"Sorry Link Is Not Valid",
                         });
                         console.log(error);
@@ -171,22 +171,22 @@ const Allfetchdata = async(request,response)=>{
                     };
                     axios.request(options).then((pintrestdata)=>{
                         if(pintrestdata === "undefined"){
-                            response.render("home",{
+                            response.render("index",{
                                 message:"Please Enter Valid Link",
                             });
                         }else{
-                            response.render("home",{
+                            response.render("index",{
                                 pintrestdata:pintrestdata.data.data,
                             });
                         }  
                     }).catch((error)=>{
-                        response.render("home",{
+                        response.render("index",{
                             message:"Please Enter Valid Link",
                         });
                         console.error(error);
                     }); 
         }else{
-            response.render("home",{
+            response.render("index",{
                 message:"Please Enter Valid Website Link",
             });
         }
