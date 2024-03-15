@@ -59,7 +59,7 @@ const notfind = require("./Routes/notfindroute");
 //set notfound 
 application.use(notfind);
 
-
+console.log("MS"); //
 //set a listen port
 application.listen(process.env.PORT_KEY, () => {
     console.log(`http://localhost:${process.env.PORT_KEY}`);
