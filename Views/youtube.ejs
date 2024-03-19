@@ -3,12 +3,12 @@
 	<section class="bg text-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mt-4">
+                <div class="col-lg-6 download-margin">
                     
-                    <h3 class="mt-5">We are Social Media Downloder</h3>
+                    <h3 class="text-margin mobile-margin">We are Social Media Downloder</h3>
                     <p>Copy and paste your videos links and download your video free of cost</p>
                     <!------>
-                    <div class="card p-3 shadow bg2 br">
+                    <div class="card p-3 shadow bg2 br mobile-div_card">
                         <div class="mt-4">
                             <form method="post" id="formdata">
                                 <small id="error" class="text-danger mb-2"></small>
@@ -19,19 +19,21 @@
                             </form>
                         </div>
                     </div>
-                    <% if (typeof(data) !== "undefined") { %>
-                        <div class="card p-3 shadow bg2 br w-75 mt-3">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <img src="<%= data.thumbnail[1].url%>" alt="Sorry Thumb not Availbel" class="text-dark br"><br>
-                                </div>
+                    <% if (typeof(data) !== "undefined") {%>
 
-                                <div class="col-lg-6 ms-2">
-                                    <a href="<%=data.formats[1].url%>" download="<%=data.formats[1].url%>" class="btn btn-sm btn-primary mt-3">Download 360P</a><br>
-                                    <a href="<%=data.formats[2].url%>" download="<%=data.formats[2].url%>" class="btn btn-sm btn-primary mt-3">Download 720P</a><br>
-                                </div>
-                            </div>  
+                    <div class="col-lg-8 bg-light br mt-1 y-video mobile-card">
+                      <div class="card">
+                        <div class="img-card">
+                          <img src="<%=data[0].pictureUrl%>" alt="Sorry Thumb not Availbel" class="text-dark br y-img mobile_div"><br>
                         </div>
+                        <div class="card-body y-link">
+                          <a href="<%=data[0].urls[0].url%>" download="<%=data[0].urls[0].url%>" class="btn btn-sm btn-primary mt-3 low_download mobile-download_btn">Download 360P</a>
+                          <a href="<%=data[0].urls[1].url%>" download="<%=data[0].urls[1].url%>" class="btn btn-sm btn-primary mt-3 high_download">Download 720P</a><br>
+                        </div>
+                      </div>
+                    </div>       
+
+                        
                     <%} else { %>
                         <%if (typeof(message) !== "undefined") { %>
                             <div class="card p-3 shadow bg2 br w-75 mt-3">
@@ -41,29 +43,79 @@
                     <% } %>
                 </div>
                 <div class="col-lg-6 mt-5">
-                    <img src="Pictures/ms.png" class="w-100 move" alt="">
+                    <img src="Pictures/sml.png" class="w-100 move" alt="">
                 </div>
             </div>
         </div>       
     </section>
 </section>
+
+
 <section class="bgimg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="w-75 mx-auto">
-                    <h3 class="mt-2"><b>Supported Platform</b></h3>
-                    <img src="Pictures/os.phone.png" class="os w-75" alt="">
-                </div>
-            </div>
-        </div>
+    <div class="mx-auto p-1">
+        <h3 class="support text-light mt-1"><b>Supported Platform</b></h3>
     </div>
-    <h6 class="mt-4 text-center col-lg-10 mx-auto">
-        With our Social Media video downloader, you can select videos and download them free of charge!You can get high-quality videos in MP4,HD, Full HD quality, and other formats. Our software works both on PC and mobile, allowing you to use it anywhere you are!
-    </h6>
-    <h6 class="mt-1 text-center col-lg-10 mx-auto">
-          YouTube video download has never been so simple! Don’t waste your time. Just enjoy our website on your devices and enjoy free content!
-    </h6>
+    <div class="container verison-platform mt-5">
+    <div class="card cst">
+      <div class="face face1">
+        <div class="content">
+           <i class="fab fa-windows"></i>            
+          <h3 >Windows</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p> Our social media downloader website is dedicated to providing an exceptional user experience for Windows platform users</p>
+        </div>
+      </div>
+   </div>
+   
+   <div class="card cst">
+      <div class="face face1">
+        <div class="content">
+     <i class="fab fa-android"></i> 
+        <h3>Android</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>Our social media downloader website is proud to extend its robust support to the Android platform, recognizing its widespread popularity among users.</p>
+        </div>
+      </div>
+   </div>
+   
+   
+   <div class="card cst">
+      <div class="face face1">
+        <div class="content">
+          <i class="fab fa-apple"></i>
+           <h3>Apple</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p> Our social media downloader website is delighted to extend its support to the iOS platform, catering to the millions of Apple device users worldwide.</p>
+        </div>
+      </div>
+   </div>
+
+   <div class="card cst">
+     <div class="face face1">
+       <div class="content">
+         <i class="fab fa-linux"></i>
+          <h3>Linux</h3>
+       </div>
+     </div>
+     <div class="face face2">
+       <div class="content">
+         <p>Our social media downloader website is committed to inclusivity, and that's why we're excited to announce our support for the Linux platform.</p>
+       </div>
+     </div>
+  </div>
+  
+ 
+   
+ </div>
 </section>
 <section class="bg-2 text-light text-center">
     <div class="container p-5">
@@ -73,6 +125,8 @@
             <p>2. This method allows to download Social Media to Mac OS and works with all versions of Windows.</p>
         </div>
     </div>
-</section>
+</secton>i
 
 <%- include("Layouts/footer.ejs"); %>
+
+

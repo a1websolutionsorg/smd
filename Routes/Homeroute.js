@@ -1,16 +1,12 @@
-const express = require('express');            
+const express = require('express');
 //set homepage 
 const Homepage = express();
-
-const url = require('url');
-//
-const path = require('path');
 //set view engine
 Homepage.set("view engine","ejs");
-
-Homepage.set("views",path.join(__dirname,"../templates"));
+//set engines
+Homepage.set('views','./templates');
 //set default stactic settings
-console.log(path.join(__dirname,"../templates"))
+const path = require('path');
 //body-parser
 const bodyParser = require("body-parser");
 // use bodyParser
@@ -20,8 +16,7 @@ Homepage.use(bodyParser.urlencoded({extended:true}));
 //load home page 
 const controller = require('../Controllers/Homecontroller');
 //adding route
-
-Homepage.get("/",controller.homepage);
+Homepage.get("/",controller.indexpage);
 //adding route
 Homepage.post("/",controller.Allfetchdata);
 //exporting route

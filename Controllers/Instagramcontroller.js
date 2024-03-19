@@ -29,7 +29,7 @@ const userdata = async(request,res)=>{
 				res.render("instagram",{
 					data:finaldetails,
 				});
-				console.log(finaldetails)
+				console.log(finaldetails.thumbnail)
 			}
 		}).catch((error)=>{
 			console.error(error);

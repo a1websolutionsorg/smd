@@ -8,28 +8,16 @@ const application = express();
 const path = require("path");
 //static
 const static = path.join(__dirname, "./Public");
-console.log(static)
-//set home engine
- application.set('view engine', 'ejs');
-// //set file path
-const views = path.join(__dirname, './views');
-
-//console.log(views)
-// //set route
-application.set("views",views);
 //use a folder for staic files
 application.use(express.static(static));
 //set static
 application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dist/css")));
 //set bs5js
 application.use(express.static(path.join(__dirname,"./node_modules/bootstrap/dist/js")));
-
-//const bootstrapviewr = path.join(__dirname,"./node_modules/bootstrap/dist/css");
-//console.log(bootstrapviewr);
-
-const Homepages = require ("./Routes/Homeroute");
+//set Home page
+const Homepage = require ("./Routes/Homeroute");
 //use homepage
-application.use(Homepages);
+application.use(Homepage);
 //get Home route
 const youtubepage = require("./Routes/Youtuberoute");
 //get home page
@@ -52,16 +40,13 @@ const tiktokpage = require("./Routes/Tiktokroute");
 application.use(tiktokpage);
 //get privcay route
 const aboutpage = require("./Routes/Aboutroute");
-//set route 
+//set route
 application.use(aboutpage);
 //get notfound
 const notfind = require("./Routes/notfindroute");
 //set notfound 
 application.use(notfind);
-
-console.log("MS"); //
 //set a listen port
 application.listen(process.env.PORT_KEY, () => {
     console.log(`http://localhost:${process.env.PORT_KEY}`);
 });
-

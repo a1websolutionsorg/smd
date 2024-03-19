@@ -3,11 +3,11 @@
 	<section class="bg text-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mt-4" >
-                    <h3 class="mt-5">We are Social Media Downloder</h3>
+                <div class="col-lg-6 download-margin" >
+                    <h3 class="text-margin mobile-margin">We are Social Media Downloder</h3>
                     <p>Copy and paste your videos links and download your video free of cost</p>
                     <!------>
-                    <div class="card p-3 shadow bg2 br">
+                    <div class="card p-3 shadow bg2 br mobile-div_card">
                         <div class="mt-4">
                             <form method="post">
                                 <h6 class="text-dark">Download Instagram Video</h6>
@@ -18,11 +18,17 @@
                         </div>
                     </div>
                     <% if (typeof(data) !== "undefined") { %>
-                        <div class="card p-3 shadow bg2 br w-50 mt-3">
+                        <div class="card p-3 shadow bg2 br instag mt-3 insta-card">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <img src="<%=data.thumbnail%>" alt="Sorry Thumb not Availbel" class="text-dark w-50 br h-50"><br>
-                                    <a href="<%=data.media%>" download="<%=data.media%>" class="btn btn-sm btn-primary mt-3 br">Download</a>
+                                <div class="col-lg-6">
+
+                                   <img src="Pictures/thumbnail.png" class="card-thumnail fb-mobile_div">
+                                     <a href="<%=data.media%>" download="<%=data.media%>" class="btn btn-sm btn-primary mt-2 br ins-btn">Download</a>
+                                     
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="Pictures/ins.jpg" alt="Sorry Thumbnail not Availbel" class="text-dark br ins-img"><br>
+                                   
                                 </div>
                             </div>  
                         </div>
@@ -35,29 +41,77 @@
                     <% } %>
                 </div>
                 <div class="col-lg-6 mt-5">
-                    <img src="Pictures/ms.png" class="w-100 move" alt="">
+                    <img src="Pictures/sml.png" class="w-100 move" alt="">
                 </div>
             </div>
         </div>       
     </section>
 </section>
 <section class="bgimg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="w-75 mx-auto">
-                    <h3 class="mt-2"><b>Supported Platform</b></h3>
-                    <img src="Pictures/os.phone.png" class="os w-75" alt="">
-                </div>
-            </div>
-        </div>
+    <div class="mx-auto p-1">
+        <h3 class="support text-light mt-1"><b>Supported Platform</b></h3>
     </div>
-    <h6 class="mt-4 text-center col-lg-10 mx-auto">
-        With our Social Media video downloader, you can select videos and download them free of charge!You can get high-quality videos in MP4,HD, Full HD quality, and other formats. Our software works both on PC and mobile, allowing you to use it anywhere you are!
-    </h6>
-    <h6 class="mt-1 text-center col-lg-10 mx-auto">
-          YouTube video download has never been so simple! Don’t waste your time. Just enjoy our website on your devices and enjoy free content!
-    </h6>
+    <div class="container verison-platform mt-5">
+    <div class="card cst">
+      <div class="face face1">
+        <div class="content">
+           <i class="fab fa-windows"></i>            
+          <h3 >Windows</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>Our social media downloader website is dedicated to providing an exceptional user experience for Windows platform users.</p>
+        </div>
+      </div>
+   </div>
+   
+   <div class="card cst">
+      <div class="face face1">
+        <div class="content">
+     <i class="fab fa-android"></i> 
+        <h3>Android</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>Our social media downloader website is proud to extend its robust support to the Android platform, recognizing its widespread popularity among users.</p>
+        </div>
+      </div>
+   </div>
+   
+   
+   <div class="card cst">
+      <div class="face face1">
+        <div class="content">
+          <i class="fab fa-apple"></i>
+           <h3>Apple</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p> Our social media downloader website is delighted to extend its support to the iOS platform, catering to the millions of Apple device users worldwide.</p>
+        </div>
+      </div>
+   </div>
+
+   <div class="card cst">
+     <div class="face face1">
+       <div class="content">
+         <i class="fab fa-linux"></i>
+          <h3>Linux</h3>
+       </div>
+     </div>
+     <div class="face face2">
+       <div class="content">
+         <p>Our social media downloader website is committed to inclusivity, and that's why we're excited to announce our support for the Linux platform.</p>
+       </div>
+     </div>
+  </div>
+  
+ 
+   
+ </div>
 </section>
 <section class="bg-2 text-light text-center">
     <div class="container p-5">

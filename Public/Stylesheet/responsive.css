@@ -1,0 +1,83 @@
+@media only screen and (max-width: 360px) {
+    .m-section {
+        height: auto !important;
+    }
+
+    .m-card {
+        height: 1800px;
+    }
+
+    .mobile-margin {
+        margin-top: -20px;
+        margin-top: -73px;
+        margin-left: 3px;
+        font-size: 20px;
+    }
+
+    .mobile-card {
+        margin-left: 1px;
+        width: 297px;
+    }
+
+    .mobile_div {
+        margin-left: -59px;
+        width: 289px;
+        height: 220px;
+        border-radius: 28px;
+    }
+
+    .mobile-div_card {
+        width: 331px;
+        margin-left: -16px;
+    }
+
+    .mobile-download_btn {
+        margin-left: -14px;
+    }
+
+    .fb-mobile {
+        margin-left: -17px;
+        height: 284px;
+    }
+
+    .fb-mobile_div {
+        margin-left: 4px;
+        width: 289px;
+        height: 198px;
+        border-radius: 28px;
+        margin-top: 17px;
+    }
+
+    .fb_btn {
+        margin-left: 35px;
+    }
+    .ins-img{
+        display: none;
+    }
+    .insta-card{
+        margin-left: -15px;
+    }
+    .tiktok-card{
+        width: 308px;
+    margin-left: -4px;
+    }
+    .tiktok_div{
+    margin-left: 5px;
+    width: 268px;
+    height: 216px;
+}
+    .tiktok_btn{
+        margin-left: 60px;
+    }
+    .pin-card{
+    width: 321px;
+    margin-left: -11px;
+    }
+    .pin-img{
+        margin-left: -62px;
+    }
+    .pin-btn{
+        margin-left: 20px;
+        width: 132px;
+    }
+}

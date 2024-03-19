@@ -13,6 +13,5 @@ notfindpage.set('views',Views);
 const controller = require('../Controllers/notfindcontroller');
 //set home
 notfindpage.get("*",controller.notfind);
-
 //export home
 module.exports = notfindpage;
