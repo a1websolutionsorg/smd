@@ -1,132 +1,140 @@
 <%- include("Layouts/header.ejs"); %>
-<section class="">
-	<section class="bg text-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 download-margin">
-                    
-                    <h3 class="text-margin mobile-margin">We are Social Media Downloder</h3>
-                    <p>Copy and paste your videos links and download your video free of cost</p>
-                    <!------>
-                    <div class="card p-3 shadow bg2 br mobile-div_card">
-                        <div class="mt-4">
-                            <form method="post" id="formdata">
-                                <small id="error" class="text-danger mb-2"></small>
-                                <h6 class="text-dark">Download Youtube Video</h6>
-                                <small class="text-dark">Enter And Paste Your Link Here ..</small>
-                                <input type="url" class="form-control form-control-sm mt-3 br" placeholder="Enter Your Link" name="youvalue" required>
-                                <input type="submit" class="btn btn-sm btn-primary mt-3" value="Download">  
-                            </form>
-                        </div>
+  <section class="">
+    <section class="bg text-light m-section">
+      <div class="container">
+        <div class="row" style="margin-left: 70px;">
+          <div class="download-margin">
+
+            <h1 class="text-margin mobile-margin">We are YouTube Video Downloder</h1>
+            <p class="para-text-margin">Copy and paste your videos links and download your video free of cost</p>
+            <!------>
+            <div class="d-card mobile-div_card">
+              <div class="mt-4">
+                <form method="post" id="formdata">
+                  <small id="error" class="text-danger mb-2"></small>
+                  <h6 class="text-light" style="
+                                    text-align: center; font-size: 19px;">Download Youtube Video</h6>
+                  <!-- <small class="text-dark">Enter And Paste Your Link Here ..</small> -->
+                  <input type="url" class="form-control form-control-sm mt-3 br" placeholder="Enter Your Link"
+                    name="youvalue" required>
+                  <input type="submit" class="download-btn btn btn-sm btn-dark mt-2" value="Download">
+                </form>
+              </div>
+              <% if (typeof(data) !=="undefined" ) {%>
+
+                <div class="col-lg-8 bg-light br mt-2 y-video mobile-card">
+                    <div class="img-card">
+                      <img src="<%=data[0].pictureUrl%>" alt="Sorry Thumb not Availbel"
+                        class="text-dark br y-img mobile_div"><br>
+                    <div class="card-body y-link">
+                      <a href="<%=data[0].urls[0].url%>" download="<%=data[0].urls[0].url%>"
+                        class="btn btn-sm btn-primary mt-2 low_download mobile-download_btn">Download 360P</a>
+                      <a href="<%=data[0].urls[1].url%>" download="<%=data[0].urls[1].url%>"
+                        class="btn btn-sm btn-primary mt-2 high_download">Download 720P</a><br>
                     </div>
-                    <% if (typeof(data) !== "undefined") {%>
+                  </div>
+                </div>
 
-                    <div class="col-lg-8 bg-light br mt-1 y-video mobile-card">
-                      <div class="card">
-                        <div class="img-card">
-                          <img src="<%=data[0].pictureUrl%>" alt="Sorry Thumb not Availbel" class="text-dark br y-img mobile_div"><br>
-                        </div>
-                        <div class="card-body y-link">
-                          <a href="<%=data[0].urls[0].url%>" download="<%=data[0].urls[0].url%>" class="btn btn-sm btn-primary mt-3 low_download mobile-download_btn">Download 360P</a>
-                          <a href="<%=data[0].urls[1].url%>" download="<%=data[0].urls[1].url%>" class="btn btn-sm btn-primary mt-3 high_download">Download 720P</a><br>
-                        </div>
-                      </div>
-                    </div>       
-
-                        
-                    <%} else { %>
-                        <%if (typeof(message) !== "undefined") { %>
-                            <div class="card p-3 shadow bg2 br w-75 mt-3">
-                                <small class="text-danger"><%=message%></small>
-                            </div>    
-                        <% } %>
+                <%} else { %>
+                  <%if (typeof(message) !=="undefined" ) { %>
+                    <div class="card p-3 shadow bg2 br w-75 mt-3">
+                      <small class="text-danger">
+                        <%=message%>
+                      </small>
+                    </div>
                     <% } %>
-                </div>
-                <div class="col-lg-6 mt-5">
-                    <img src="Pictures/sml.png" class="w-100 move" alt="">
-                </div>
+                      <% } %>
             </div>
-        </div>       
+          </div>
+          <!-- <div class="col-lg-6 mt-5">
+                    <img src="Pictures/sml.png" class="w-100 move" alt="">
+                </div> -->
+        </div>
+      </div>
     </section>
-</section>
+  </section>
 
 
-<section class="bgimg">
+  <section class="bgimg m-card">
     <div class="mx-auto p-1">
-        <h3 class="support text-light mt-1"><b>Supported Platform</b></h3>
+      <h3 class="support text-light mt-1"><b class="s-p">Supported Platform</b></h3>
     </div>
     <div class="container verison-platform mt-5">
-    <div class="card cst">
-      <div class="face face1">
-        <div class="content">
-           <i class="fab fa-windows"></i>            
-          <h3 >Windows</h3>
+      <div class="card cst">
+        <div class="face face1">
+          <div class="content">
+            <i class="fab fa-windows"></i>
+            <h3>Windows</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p> Our social media downloader website is dedicated to providing an exceptional user experience for Windows
+              platform users</p>
+          </div>
         </div>
       </div>
-      <div class="face face2">
-        <div class="content">
-          <p> Our social media downloader website is dedicated to providing an exceptional user experience for Windows platform users</p>
-        </div>
-      </div>
-   </div>
-   
-   <div class="card cst">
-      <div class="face face1">
-        <div class="content">
-     <i class="fab fa-android"></i> 
-        <h3>Android</h3>
-        </div>
-      </div>
-      <div class="face face2">
-        <div class="content">
-          <p>Our social media downloader website is proud to extend its robust support to the Android platform, recognizing its widespread popularity among users.</p>
-        </div>
-      </div>
-   </div>
-   
-   
-   <div class="card cst">
-      <div class="face face1">
-        <div class="content">
-          <i class="fab fa-apple"></i>
-           <h3>Apple</h3>
-        </div>
-      </div>
-      <div class="face face2">
-        <div class="content">
-          <p> Our social media downloader website is delighted to extend its support to the iOS platform, catering to the millions of Apple device users worldwide.</p>
-        </div>
-      </div>
-   </div>
 
-   <div class="card cst">
-     <div class="face face1">
-       <div class="content">
-         <i class="fab fa-linux"></i>
-          <h3>Linux</h3>
-       </div>
-     </div>
-     <div class="face face2">
-       <div class="content">
-         <p>Our social media downloader website is committed to inclusivity, and that's why we're excited to announce our support for the Linux platform.</p>
-       </div>
-     </div>
-  </div>
-  
- 
-   
- </div>
-</section>
-<section class="bg-2 text-light text-center">
-    <div class="container p-5">
+      <div class="card cst">
+        <div class="face face1">
+          <div class="content">
+            <i class="fab fa-android"></i>
+            <h3>Android</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p>Our social media downloader website is proud to extend its robust support to the Android platform,
+              recognizing its widespread popularity among users.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card cst">
+        <div class="face face1">
+          <div class="content">
+            <i class="fab fa-apple"></i>
+            <h3>Apple</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p> Our social media downloader website is delighted to extend its support to the iOS platform, catering to
+              the millions of Apple device users worldwide.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card cst">
+        <div class="face face1">
+          <div class="content">
+            <i class="fab fa-linux"></i>
+            <h3>Linux</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p>Our social media downloader website is committed to inclusivity, and that's why we're excited to announce
+              our support for the Linux platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="learn">
+    <img src="/Pictures/step.jpg" class="w-100">
+  </section>
+  <section class="bg-2 text-light text-center">
+    <div class="container p-5 mt-1">
         <div class="col-lg-9 mx-auto">
-            <h3 class="">How to save YouTube videos in various formats</h3>
-            <p class="mt-3">1. If you want to download Social Media videos in HD or MP4, use Social Media Downloads.<br>
-            <p>2. This method allows to download Social Media to Mac OS and works with all versions of Windows.</p>
+            <h3 class="">You Can Save Social Media Videos in Various Formats & Platforms</h3>
+            <p class="mt-3">1. If you want to download social media videos in different formats, such as HD or MP4,
+                use Social Media Downloads..<br>
+            <p>2. This method allows to download Social Media to Mac OS, Windows and works with all versions of
+                operating system.</p>
         </div>
     </div>
-</secton>i
+</section>
 
-<%- include("Layouts/footer.ejs"); %>
-
-
+  <%- include("../Views/Layouts/footer.ejs"); %>

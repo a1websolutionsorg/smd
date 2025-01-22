@@ -1,19 +1,54 @@
 @media only screen and (max-width: 360px) {
+    .m-nav{
+        text-align: center;
+    }
+    .mobile-index{
+        margin-left: -144px;
+    }
     .m-section {
         height: auto !important;
     }
 
     .m-card {
         height: 1800px;
+        margin-top: -53px;
     }
+    .fb-mar{
+        margin-left: 11px;
+        width: 95%;
+    }
+    .Facebook_img {
+        width: 303px;
+        height: 247px;
+        margin-left: -11px;
+        margin-top: 0px;
+      }   
+      .low_facebook {
+        width: 46%;
+    margin-left: 14px;
+      }
+         
+    /* .download-margin {
+        display: block;
 
+    } */
+.m-version{
+    margin-left: 10px;
+}
     .mobile-margin {
         margin-top: -20px;
-        margin-top: -73px;
-        margin-left: 3px;
-        font-size: 20px;
+        margin-left: -258px;
+        font-size: 17px;
+        margin-top: -44px;
     }
-
+.m-p-t{
+    margin-left: -263px;
+    font-size: 10px;
+}
+.m-learn{
+    width: 121%;
+    margin-left: -35px;
+}
     .mobile-card {
         margin-left: 1px;
         width: 297px;
@@ -29,6 +64,7 @@
     .mobile-div_card {
         width: 331px;
         margin-left: -16px;
+        margin-top: -4px;
     }
 
     .mobile-download_btn {
@@ -81,3 +117,164 @@
         width: 132px;
     }
 }
+@media (min-width: 361px) and (max-width: 576px) {
+    /* Styles for small tablets */
+    .m-nav{
+        text-align: center;
+    }
+    .mobile-index{
+        margin-left: -119px;
+    }
+    .m-section {
+        height: auto !important;
+    }
+
+    .m-card {
+        height: 1800px;
+        margin-top: -53px;
+    }
+    
+.fb-mar {
+    margin-left: -24px;
+    width: 111%;
+  
+  }
+  .Facebook_img {
+  width: 349px;
+  height: 247px;
+  margin-left: -8px;
+  margin-top: 0px;
+  }
+  .low_facebook {
+    width: 35%;
+    margin-left: 56px;
+  }
+    /* .download-margin {
+        display: block;
+
+    } */
+    .support {
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 800;
+        position: relative;
+        text-align: center;
+        padding: 18px;
+        z-index: 1;
+      }
+
+.m-version{
+    margin-left: 30px;
+}
+    .mobile-margin {
+        margin-top: -20px;
+        margin-left: -258px;
+        font-size: 17px;
+        margin-top: -44px;
+    }
+.m-p-t{
+    margin-left: -263px;
+    font-size: 10px;
+}
+.m-learn{
+    width: 121%;
+    margin-left: -35px;
+}
+    .mobile-card {
+        margin-left: 1px;
+        width: 297px;
+    }
+
+    .mobile_div {
+        margin-left: -59px;
+        width: 289px;
+        height: 220px;
+        border-radius: 28px;
+    }
+
+    .mobile-div_card {
+        width: 331px;
+        margin-left: -16px;
+        margin-top: -4px;
+    }
+
+    .mobile-download_btn {
+        margin-left: -14px;
+    }
+}
+  @media (min-width: 577px) and (max-width: 768px) {
+    /* Styles for small tablets */
+    .m-nav{
+        text-align: center;
+    }
+    .mobile-index{
+        margin-left: 38px;
+
+    }
+    .m-section {
+        height: auto !important;
+                background-size: cover;
+        margin-left: -124px;
+    }
+
+    .m-card {
+        height: 1800px;
+        margin-top: -53px;
+    }
+    /* .download-margin {
+        display: block;
+
+    } */
+.m-version{
+    margin-left: 122px;
+}
+    .mobile-margin {
+        margin-top: -20px;
+        margin-top: -44px;
+        margin-left: -284px;
+        font-size: 25px;
+
+    }
+.m-p-t{
+    margin-left: -283px;
+    font-size: 12px;
+}
+.m-learn{
+    width: 121%;
+    margin-left: -51px;
+}
+    .mobile-card {
+        margin-left: 1px;
+        width: 297px;
+    }
+
+    .mobile_div {
+        margin-left: -59px;
+        width: 289px;
+        height: 220px;
+        border-radius: 28px;
+    }
+
+    .mobile-div_card {
+        width: 331px;
+        margin-left: -16px;
+        margin-top: -4px;
+    }
+    .Facebook_img {
+        width: 380px;
+        height: 247px;
+        margin-left: 4px;
+        margin-top: 0px;
+      }
+      .fb-mar {
+        margin-left: -51px;
+        width: 128%;
+          }
+      
+    .mobile-download_btn {
+        margin-left: -14px;
+    }
+  }
+  
+   

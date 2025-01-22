@@ -16,23 +16,31 @@ const Allfetchdata = async(request,response)=>{
                 headers: {
                     'content-type': 'application/json',
                     'X-Forwarded-For': '70.41.3.18',
-                    'X-RapidAPI-Key': '5ed88926c7mshaf1da489d92a152p15bdc3jsne9c441f254b2',
+                    'X-RapidAPI-Key': `5ed88926c7mshaf1da489d92a152p15bdc3jsne9c441f254b2`,
                     'X-RapidAPI-Host': 'youtube86.p.rapidapi.com'
                 },
                 data:{
                     url:userlink
                 }
-            };
+            }; //new api 
+        //     const options = {
+        //         method: 'GET',
+        //         url: 'https://ytstream-download-youtube-videos.p.rapidapi.com/dl',
+        //         params: {id: userlink},
+        //         headers: {
+        //           'x-rapidapi-key': '140cdb8cb2mshc3fddc60e73bda7p1aa0b1jsnea6248f0717b',
+        //           'x-rapidapi-host': 'ytstream-download-youtube-videos.p.rapidapi.com'
+        //         }
+        //       };
             try{
                 const result = await axios.request(options);
-        
                 response.render("index",{
-                    data:result.data,
+                    data: result.data,
                 });
-        
+
             }catch(error){
                 console.error(error);
-            }
+            }                      
         }else if(userlink.includes("https://www.instagram.com/")){
                 const axios = require("axios");
                 const userinput = request.body.allvalue;

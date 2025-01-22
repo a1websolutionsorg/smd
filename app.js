@@ -49,5 +49,4 @@ application.use(notfind);
 //set a listen port
 application.listen(process.env.PORT_KEY, () => {
     console.log(`http://localhost:${process.env.PORT_KEY}`);
-    console.log("Hello world")
 });

@@ -1,35 +1,63 @@
 <%- include("../Views/Layouts/header.ejs"); %>
     <section class="">
+        <!-- <section class="p-1 bsb-hero-1 px-3 bsb-overlay bsb-hover-pull bg text-light">
+            <div class="container">
+              <div class="row justify-content-md-center mt-5 mb-5 hero-row">
+                <div class="mx-auto col-12 col-md-11 col-lg-12 col-xl-10 text-center">
+                  <h2 class="display-4 fw-bold mb-3">We are All in one Social Media Downloder</h2>
+                  <p class="lead mb-3">Copy and paste your videos links and download your video free of
+                    cost</p>
+                  <div class="mt-1">
+                    <form method="post" id="formdata" autocomplete="on">
+                        <small id="error" class="text-danger mb-2"></small>
+                        <h6 class="text-light text-center" style="
+                         font-size: 19px;">Download Your Video</h6>
+                         <small class="text-light">Enter And Paste Your Link Here ..</small> -->
+                        <!-- <input type="url" class="form-control form-control-sm mt-3 br"
+                            placeholder="Enter Your Link" name="allvalue" required>
+                        <input type="submit" class="download-btn btn btn-sm btn-dark mt-3" value="Download">
+                    </form>
+                </div>
+                </div>
+              </div>
+            </div> --> 
         <section class="bg text-light m-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 download-margin">
-
-                        <h3 class="text-margin mobile-margin">We are All in one Social Media Downloder</h3>
-                        <p class="para-text-margin">Copy and paste your videos links and download your video free of cost</p>
-                        <!------>
-                        <div class="card p-3 shadow bg2 br div-card mobile-div_card">
+                <div class="row mobile-index">
+                    <div class="download-margin">
+                          
+                        <h1 class="text-margin mobile-margin">We are All in one Social Media Downloder</h1>
+ <!-- <h1 class="text-center">We are All in one Social Media Downloder</h1> -->
+                        <p class="para-text-margin m-p-t">Copy and paste your videos links and download your video free of
+                            cost</p> 
+                        
+                         <div class="d-card mobile-div_card"> 
+                         <!-- class="d-card card p-3 shadow bg2 br div-card mobile-div_card" -->
+                            <div class="col-lg-12">
                             <div class="mt-4">
                                 <form method="post" id="formdata" autocomplete="on">
                                     <small id="error" class="text-danger mb-2"></small>
-                                    <h6 class="text-dark">Download Your Video</h6>
-                                    <small class="text-dark">Enter And Paste Your Link Here ..</small>
-                                    <input type="url" class="form-control form-control-sm mt-3 br"
+                                    <h6 class="text-light" style="
+                                    text-align: center; font-size: 19px;">Download Your Video</h6> 
+                                     <!-- <small class="text-light">Enter And Paste Your Link Here ..</small>  -->
+                                     <input type="url" class="form-control form-control-sm mt-3 br"
                                         placeholder="Enter Your Link" name="allvalue" required>
-                                    <input type="submit" class="btn btn-sm btn-primary mt-3" value="Download">
+                                    <input type="submit" class="download-btn btn-sm btn-dark mt-3" value="Download">
                                 </form>
                             </div>
+                        </div>
                             <% if(typeof(youtube)!=="undefined" ){ %>
                                 <div class="card p-3 shadow bg2 br mt-3 video-card mobile-card">
                                     <div class="row">
                                         <div class="col-lg-6 img_div">
-                                            <img src="<%=data[0].pictureUrl%>" class="mobile_div br" alt="Sorry Thumb not Availbel"
-                                                class="text-dark "><br>
+                                            <img src="<%=data[0].pictureUrl%>" class="mobile_div br"
+                                                alt="Sorry Thumb not Availbel" class="text-dark"><br>
                                         </div>
 
                                         <div class="col-lg-6 ms-2 download_div">
                                             <a href="<%=data[0].urls[0].url%>" download="<%=data[0].urls[0].url%>"
-                                                class="btn btn-sm btn-primary mt-3 low_download mobile-download_btn">Low Quality
+                                                class="btn btn-sm btn-primary mt-3 low_download mobile-download_btn">Low
+                                                Quality
                                                 Download</a><br>
                                             <a href="<%=data[0].urls[1].url%>" download="<%=data[0].urls[1].url%>"
                                                 class="btn btn-sm btn-primary mt-3 high_download">HD Quality
@@ -40,12 +68,13 @@
                                 <% } else if(typeof(instadata)!=="undefined" ){ %>
                                     <div class="card p-3 shadow bg2 br instag mt-3">
                                         <div class="row">
-                                            
+
                                             <div class="col-lg-6">
 
                                                 <img src="Pictures/thumbnail.png" class="card-thumnail">
-                                                     <a href="<%=instadata.url%>" download="<%=instadata.url%>" class="btn btn-sm btn-primary mt-2 br ins-btn">Download</a>                                              
-                                             </div>
+                                                <a href="<%=instadata.url%>" download="<%=instadata.url%>"
+                                                    class="btn btn-sm btn-primary mt-2 br ins-btn">Download</a>
+                                            </div>
 
                                             <div class="col-lg-6">
                                                 <img src="Pictures/ins.jpg" alt="Sorry Thumb not Availbel"
@@ -54,14 +83,15 @@
                                         </div>
                                     </div>
                                     <% } else if(typeof(data)!=="undefined" ){ %>
-                                        <div class="card p-3 shadow bg2 br w-75 mt-3 fb-mar">
+                                        <div class="card p-3 shadow bg2 br mt-3 fb-mar">
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <img src="<%=data[0].pictureUrl%>" alt="Sorry Thumb not Availbel"
                                                         class="text-dark br Facebook_img"><br>
                                                     <a href="<%=data[0].urls[1].url%>"
                                                         download="<%=data[0].urls[1].url%>"
-                                                        class="btn btn-sm btn-primary mt-3 br low_facebook">Download Low</a>
+                                                        class="btn btn-sm btn-primary mt-3 br low_facebook">Download
+                                                        Low</a>
                                                     <a href="<%=data[0].urls[0].url%>"
                                                         download="<%=data[0].urls[0].url%>"
                                                         class="btn btn-sm btn-primary mt-3 br">Download High</a>
@@ -106,87 +136,89 @@
                                                             <% } %>
                         </div>
                     </div>
-                    <div class="col-lg-6 mt-5">
+                    <!-- <div class="col-lg-6 mt-5">
                         <img src="Pictures/sml.png" class="w-100 move" alt="">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
     </section>
     <section class="bgimg m-card">
         <div class="mx-auto p-1">
-            <h3 class="support text-light mt-1"><b>Supported Platform</b></h3>
+            <h3 class="support text-light mt-1"><b class="s-p">Supported Platform</b></h3>
         </div>
-        <div class="container verison-platform mt-5">
-        <div class="card cst">
-          <div class="face face1">
-            <div class="content">
-               <i class="fab fa-windows"></i>            
-              <h3 >Windows</h3>
+        <div class="container verison-platform mt-5 m-version">
+            <div class="card cst">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fa-brands fa-windows"></i>
+                        <h3>Windows</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Our social media downloader website is dedicated to providing an exceptional user experience
+                            for Windows platform users.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="face face2">
-            <div class="content">
-              <p>Our social media downloader website is dedicated to providing an exceptional user experience for Windows platform users.</p>
+
+            <div class="card cst">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fab fa-android"></i>
+                        <h3>Android</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>
+                            Our social media downloader website is proud to extend its robust support to the Android
+                            platform, recognizing its widespread popularity among users.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-       </div>
-       
-       <div class="card cst">
-          <div class="face face1">
-            <div class="content">
-         <i class="fab fa-android"></i> 
-            <h3>Android</h3>
+            <div class="card cst">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fab fa-apple"></i>
+                        <h3>Apple</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> Our social media downloader website is delighted to extend its support to the iOS platform,
+                            catering to the millions of Apple device users worldwide.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="face face2">
-            <div class="content">
-              <p> 
-                Our social media downloader website is proud to extend its robust support to the Android platform, recognizing its widespread popularity among users.</p>
+
+            <div class="card cst">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fab fa-linux"></i>
+                        <h3>Linux</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Our social media downloader website is committed to inclusivity, and that's why we're excited
+                            to announce our support for the Linux platform.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-       </div>
-       
-       
-       <div class="card cst">
-          <div class="face face1">
-            <div class="content">
-              <i class="fab fa-apple"></i>
-               <h3>Apple</h3>
-            </div>
-          </div>
-          <div class="face face2">
-            <div class="content">
-              <p> Our social media downloader website is delighted to extend its support to the iOS platform, catering to the millions of Apple device users worldwide.</p>
-            </div>
-          </div>
-       </div>
-   
-       <div class="card cst">
-         <div class="face face1">
-           <div class="content">
-             <i class="fab fa-linux"></i>
-              <h3>Linux</h3>
-           </div>
-         </div>
-         <div class="face face2">
-           <div class="content">
-             <p>Our social media downloader website is committed to inclusivity, and that's why we're excited to announce our support for the Linux platform.</p>
-           </div>
-         </div>
-      </div>
-      
-     
-       
-     </div>
+    </section>
+    <section class="learn m-learn">
+        <img src="/Pictures/step.jpg" class="w-100">
     </section>
     <section class="bg-2 text-light text-center">
         <div class="container p-5 mt-1">
             <div class="col-lg-9 mx-auto">
-                <h3 class="">How to save Social Media videos in various formats</h3>
-                <p class="mt-3">1. If you want to download Social Media videos in HD or MP4, use Social Media
-                    Downloads.<br>
-                <p>2. This method allows to download Social Media to Mac OS, Windows and works with all versions of operating system.</p>
+                <h3 class="">You Can Save Social Media Videos in Various Formats & Platforms</h3>
+                <p class="mt-3">1. If you want to download social media videos in different formats, such as HD or MP4,
+                    use Social Media Downloads..<br>
+                <p>2. This method allows to download Social Media to Mac OS, Windows and works with all versions of
+                    operating system.</p>
             </div>
         </div>
     </section>
